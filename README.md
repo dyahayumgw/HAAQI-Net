@@ -13,4 +13,4 @@ When designing HAAQI-Net, we focused on three key properties that achieve signif
   <img width="40%" src="https://github.com/dyahayumgw/HAAQI-Net/blob/main/pic/HAAQI-Net.png" alt="HAAQI-Net">
 </p>
 
-For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145)
+For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145) and [dataset](https://t.ly/vLv29)
