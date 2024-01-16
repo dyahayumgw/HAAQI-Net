@@ -1,0 +1,31 @@
+Train: True # train or test (True/False)
+seed: 999
+batch_size: 1
+num_workers: 16
+optim: 'Adam'
+loss: 'MSELoss'
+frameloss: 'frame_mse'
+whaspi: 1.5
+logmag: False
+unseen_types: ['comp_babble', 'comp_ss_babble', 'multi_res_peak_lpf', 'babble_comp_hpf', 'babble_comp_lpf', 'babble_comp_pos_tilt', 'babble_comp_neg_tilt', 'babble_comp_single_res_peak', 'babble_comp_multi_res_peak']
+
+model: BLSTM_frame_sig_att
+input_size: 264
+hidden_size: 200
+num_layers: 6
+dropout: 0.5
+linear_output: 256 
+act_fn: 'relu'
+
+# training options
+train_continue: False
+train_epoch: 10
+train_lr: 0.0001
+train_patience: 3
+train_summaries_dir: '../src/save/BLSTM_att_v2_e3/train/logs/'
+train_checkpoint_dir: '../src/save/BLSTM_att_v2_e3/train/'
+train_filepath: 'train_data.csv'
+
+# testing
+result_dir: '../src/save/BLSTM_att_v2_e3/test/'
+test_filepath: 'test_data.csv'
