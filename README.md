@@ -9,6 +9,8 @@ When designing HAAQI-Net, we focused on three key properties that achieve signif
 2. **Computationally Efficient:** HAAQI-Net is implemented using a simple neural network, enabling quality predictions to be computed in linear time.
 3. **Differentiable:** Implemented as a neural network, HAAQI-Net can be incorporated into the loss function to train deep learning models for upstream tasks.
 
-![HAAQI-Net](pic/HAAQI-Net.png)
+<p align="center">
+  <img width="40%" src="https://github.com/dyahayumgw/HAAQI-Net/blob/main/pic/HAAQI-Net.png" alt="HAAQI-Net">
+</p>
 
 For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145)
