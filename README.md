@@ -1,4 +1,4 @@
-# HAAQI-Net: A non-intrusive neural music quality assessment model for hearing aids [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145)
+# HAAQI-Net: A non-intrusive neural music quality assessment model for hearing aids
 
 ## Introduction
 HAAQI-Net is a non-intrusive deep learning model for music quality assessment tailored to hearing aid users. In contrast to traditional methods like the Hearing Aid Audio Quality Index (HAAQI), HAAQI-Net utilizes a Bidirectional Long Short-Term Memory (BLSTM) with attention. It takes an assessed music sample and a hearing loss pattern as input, generating a predicted HAAQI score. The model employs the pre-trained Bidirectional Encoder representation from Audio Transformers (BEATs) for acoustic feature extraction. Comparing predicted scores with ground truth, HAAQI-Net achieves a Longitudinal Concordance Correlation (LCC) of 0.9257, Spearman’s Rank Correlation Coefficient (SRCC) of 0.9394, and Mean Squared Error (MSE) of 0.0080. Notably, this high performance comes with a substantial reduction in inference time: from 62.52 seconds (by HAAQI) to 2.71 seconds (by HAAQI-Net), serving as an efficient music quality assessment model for hearing aid users.
@@ -13,4 +13,4 @@ When designing HAAQI-Net, we focused on three key properties that achieve signif
   <img width="40%" src="https://github.com/dyahayumgw/HAAQI-Net/blob/main/pic/HAAQI-Net.png" alt="HAAQI-Net">
 </p>
 
-For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145) and [dataset](https://t.ly/vLv29)
+For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145) and [dataset](https://t.ly/vLv29).
