@@ -14,7 +14,7 @@ When designing HAAQI-Net, we focused on three key properties that achieve signif
 </p>
 
 ## Usage Guidelines
-To utilize HAAQI-Net, refer to the usage example in haaqi_net-example.py. Our best-performing model is available in the 'model' folder, named "best_loss.pth". This model can be employed to predict HAAQI scores accurately.
+To utilize HAAQI-Net, refer to the usage example in **haaqi_net-example.py**. Our best-performing model is available in the 'model' folder, named "best_loss.pth". This model can be employed to predict HAAQI scores.
 
 For the BEATs model, you can download it from [BEATs](https://github.com/microsoft/unilm/tree/master/beats). We specifically use the BEATs_iter3+ (AS2M) version.
 
