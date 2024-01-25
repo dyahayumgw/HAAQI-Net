@@ -17,7 +17,7 @@ def get_act_fn(act_fn):
     else:
         raise ValueError('Invalid argument for act_fn') 
 
-class BLSTM_frame_sig_att(nn.Module):
+class haaqi_net(nn.Module):
     def __init__(self, input_size, hidden_size, num_layers, dropout, linear_output, act_fn):
         super().__init__()
         self.blstm = nn.LSTM(input_size = input_size, 
@@ -46,7 +46,7 @@ class BLSTM_frame_sig_att(nn.Module):
         x_concate = torch.cat((x_reduced,hl_repeat), 2)
         
         out, _ = self.blstm(x_concate)
-        out = self.dropout(self.act_fn(self.linear1(out))).transpose(0,1)
+        out = self.dropout(self.act_fn(self.linear1(out))).transpose(0,1) 
         haaqi, _ = self.haaqiAtt_layer(out,out,out)
 
         haaqi= haaqi.transpose(0,1)
@@ -56,4 +56,3 @@ class BLSTM_frame_sig_att(nn.Module):
         haaqi_avg= self.haaqiaverage_score(haaqi_fram)
         
         return haaqi_fram, haaqi_avg.squeeze(1)
-       
