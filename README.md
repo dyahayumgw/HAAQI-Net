@@ -1,21 +1,87 @@
-# HAAQI-Net: A non-intrusive neural music quality assessment model for hearing aids
+# HAAQI-Net
+
+HAAQI-Net is a Non-intrusive Neural Music Audio Quality Assessment Model designed for Hearing Aids. This repository contains the source code, datasets, and pretrained models used in our research.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Datasets](#datasets)
+- [Model Architecture](#model-architecture)
+- [Results](#results)
+<!-- - [References](#references) -->
 
 ## Introduction
-HAAQI-Net is a non-intrusive deep learning model for music quality assessment tailored to hearing aid users. In contrast to traditional methods like the Hearing Aid Audio Quality Index (HAAQI), HAAQI-Net utilizes a Bidirectional Long Short-Term Memory (BLSTM) with attention. It takes an assessed music sample and a hearing loss pattern as input, generating a predicted HAAQI score. The model employs the pre-trained Bidirectional Encoder representation from Audio Transformers (BEATs) for acoustic feature extraction. Comparing predicted scores with ground truth, HAAQI-Net achieves a Longitudinal Concordance Correlation (LCC) of 0.9257, Spearman’s Rank Correlation Coefficient (SRCC) of 0.9394, and Mean Squared Error (MSE) of 0.0080. Notably, this high performance comes with a substantial reduction in inference time: from 62.52 seconds (by HAAQI) to 2.71 seconds (by HAAQI-Net), serving as an efficient music quality assessment model for hearing aid users.
+Welcome to **HAAQI-Net**, a non-intrusive, deep learning-based model designed for music audio quality assessment tailored for hearing aid users. Traditional methods, such as the Hearing Aid Audio Quality Index (HAAQI), require intrusive reference signal comparisons, limiting their accessibility and computational efficiency. HAAQI-Net overcomes these limitations by providing a more accessible and efficient alternative.
 
-## Contributions
-When designing HAAQI-Net, we focused on three key properties that achieve significant improvements over HAAQI:
-1. **Non-intrusive:** HAAQI-Net predicts HAAQI scores based on corrupted signals and does not require clean references.
-2. **Computationally Efficient:** HAAQI-Net is implemented using a simple neural network, enabling quality predictions to be computed in linear time.
-3. **Differentiable:** Implemented as a neural network, HAAQI-Net can be incorporated into the loss function to train deep learning models for upstream tasks.
+Built on a Bidirectional Long Short-Term Memory (BLSTM) architecture with attention mechanisms, HAAQI-Net utilizes features extracted from the pre-trained BEATs model. This enables the model to predict HAAQI scores directly from music audio clips and hearing loss patterns, without the need for reference signals.
 
-<p align="center">
-  <img width="40%" src="https://github.com/dyahayumgw/HAAQI-Net/blob/main/pic/HAAQI-Net.png" alt="HAAQI-Net">
-</p>
+## Features:
+1. Non-Intrusive: Unlike traditional methods, HAAQI-Net predicts audio quality scores directly from the input signals without requiring clean reference signals, making it more practical for real-world applications.
 
-## Usage Guidelines
-To utilize HAAQI-Net, refer to the usage example in **haaqi_net-example.py**. Our best-performing model is available in the 'model' folder, named "best_loss.pth". This model can be employed to predict HAAQI scores.
+2. Computationally Efficient: Designed with a simple neural network architecture, HAAQI-Net significantly reduces inference time, allowing quality predictions to be computed in linear time. This efficiency is especially beneficial for resource-constrained environments.
 
+3. Differentiable: As a fully differentiable neural network, HAAQI-Net can be seamlessly integrated into the loss function of other deep learning models. This allows it to be used for training upstream tasks, enhancing the overall performance of related models.
+
+4. High Accuracy: Achieves strong performance metrics, including a Linear Correlation Coefficient (LCC) of 0.9368, a Spearman's Rank Correlation Coefficient (SRCC) of 0.9486, and a Mean Squared Error (MSE) of 0.0064.
+
+5. Knowledge Distillation: By applying a knowledge distillation strategy, HAAQI-Net reduces its parameters by 75.85% and inference time by 96.46%, maintaining robust performance even with a significantly lighter model.
+
+6. Subjective Score Prediction: Adapted to predict subjective human scores, such as the Mean Opinion Score (MOS), with fine-tuning, providing a comprehensive assessment of audio quality.
+
+7. Robustness to SPL Variations: Demonstrates consistent performance across different Sound Pressure Level (SPL) conditions, achieving optimal results at a reference SPL of 65 dB.
+
+## Installation
+Clone this repository and install the required dependencies:
+```bash
+git clone https://github.com/your-username/HAAQI-Net.git
+cd HAAQI-Net
+pip install -r requirements.txt
+```
+
+## Usage 
+
+### BEATs Model
 For the BEATs model, you can download it from [BEATs](https://github.com/microsoft/unilm/tree/master/beats). We specifically use the BEATs_iter3+ (AS2M) version.
 
-For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145) and [dataset](https://t.ly/vLv29).
+### Training
+To train the model, run:
+```bash
+python src/train.py --config configs/train_config.yaml
+```
+
+### Evaluation
+To evaluate the model, run:
+```bash
+python src/evaluate.py --model checkpoints/haaqi_net.pth
+```
+
+## Datasets
+The datasets used for training and evaluation are provided in this link: [dataset](https://t.ly/vLv29).
+
+## Model Architecture
+
+### HAAQI-Net
+Below is the architecture diagram of HAAQI-Net:
+
+![HAAQI-Net Architecture](images/HAAQI-Net.png)
+
+### HAAQI-Net with Knowledge-Distillation
+The diagram below illustrates the HAAQI-Net model integrated with knowledge-distillation:
+
+![HAAQI-Net with Knowledge-Distillation](images/HAAQI-Net_distillBEATs.png)
+
+### Results
+
+### HAAQI-Net
+The following results were achieved using the HAAQI-Net model on benchmark datasets:
+
+![HAAQI-Net Results](images/HAAQI-Net_results.png)
+
+### HAAQI-Net with Knowledge-Distillation
+The HAAQI-Net model with knowledge-distillation demonstrates the following improvements:
+
+![HAAQI-Net with Knowledge-Distillation Results](images/HAAQI-Net_distillBEATs_results.png)
+
+For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145).
