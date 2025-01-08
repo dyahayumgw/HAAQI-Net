@@ -35,7 +35,7 @@ Built on a Bidirectional Long Short-Term Memory (BLSTM) architecture with attent
 ## Installation
 Clone this repository and install the required dependencies:
 ```bash
-git clone https://github.com/your-username/HAAQI-Net.git
+git clone https://github.com/dyahayumgw/HAAQI-Net.git
 cd HAAQI-Net
 pip install -r requirements.txt
 ```
