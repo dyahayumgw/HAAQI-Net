@@ -1,0 +1,8 @@
+src/__pycache__/backbone.cpython-39.pyc
+src/__pycache__/BEATs.cpython-39.pyc
+src/__pycache__/HAAQI_Net.cpython-39.pyc
+src/__pycache__/modules.cpython-39.pyc
+src/__pycache__/teacher_module_ws.cpython-39.pyc
+model/BEATs_iter3_plus_AS2M.pt
+model/haaqi_net_best.pth
+model/haaqi_net_distillBEATs.pth

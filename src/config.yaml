@@ -1,0 +1,10 @@
+model:
+  input_size: 264
+  hidden_size: 100
+  num_layers: 1
+  dropout: 0
+  linear_output: 256
+  act_fn: 'relu'
+
+# model paths
+beats_model_path: '/data2/user_dyah/HAAQI-Net/model/BEATs_iter3_plus_AS2M.pt'
