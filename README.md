@@ -73,23 +73,23 @@ The datasets used for training and evaluation are provided in this link: [datase
 ### HAAQI-Net
 Below is the architecture diagram of HAAQI-Net:
 
-![HAAQI-Net Architecture](images/HAAQI-Net.png)
-
-### HAAQI-Net with Knowledge-Distillation
-The diagram below illustrates the HAAQI-Net model integrated with knowledge-distillation:
-
-![HAAQI-Net with Knowledge-Distillation](images/HAAQI-Net_distillBEATs.png)
-
-### Results
-
-### HAAQI-Net
-Below is the architecture diagram of HAAQI-Net:
-
 <img src="images/HAAQI-Net.png" alt="HAAQI-Net Architecture" width="500" />
 
 ### HAAQI-Net with Knowledge-Distillation
 The diagram below illustrates the HAAQI-Net model integrated with knowledge-distillation:
 
 <img src="images/HAAQI-Net_distillBEATs.png" alt="HAAQI-Net with Knowledge-Distillation" width="500" />
+
+### Results
+
+### HAAQI-Net
+The following results were achieved using the HAAQI-Net model on benchmark datasets:
+
+<img src="images/HAAQI-Net_results.png" alt="HAAQI-Net Results" width="500" />
+
+### HAAQI-Net with Knowledge-Distillation
+The HAAQI-Net model with knowledge-distillation demonstrates the following improvements:
+
+<img src="images/HAAQI-Net_distillBEATs_results.png" alt="HAAQI-Net with Knowledge-Distillation Results" width="500" />
 
 For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145).
