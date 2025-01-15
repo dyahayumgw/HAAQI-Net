@@ -8,7 +8,6 @@ import json
 from typing import List, Tuple
 import logging
 import torchaudio.compliance.kaldi as ta_kaldi
-import teacher_module_ws as teacher_module
 from BEATs import BEATs, BEATsConfig
 
 
