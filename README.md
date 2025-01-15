@@ -83,13 +83,13 @@ The diagram below illustrates the HAAQI-Net model integrated with knowledge-dist
 ### Results
 
 ### HAAQI-Net
-The following results were achieved using the HAAQI-Net model on benchmark datasets:
+Below is the architecture diagram of HAAQI-Net:
 
-![HAAQI-Net Results](images/HAAQI-Net_results.png)
+<img src="images/HAAQI-Net.png" alt="HAAQI-Net Architecture" width="500" />
 
 ### HAAQI-Net with Knowledge-Distillation
-The HAAQI-Net model with knowledge-distillation demonstrates the following improvements:
+The diagram below illustrates the HAAQI-Net model integrated with knowledge-distillation:
 
-![HAAQI-Net with Knowledge-Distillation Results](images/HAAQI-Net_distillBEATs_results.png)
+<img src="images/HAAQI-Net_distillBEATs.png" alt="HAAQI-Net with Knowledge-Distillation" width="500" />
 
 For more details and evaluation results, please check out our [HAAQI-Net Paper](https://arxiv.org/abs/2401.01145).
