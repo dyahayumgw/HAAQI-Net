@@ -61,6 +61,7 @@ python src/train.py
 ```
 
 3) **Edit hyperparameters in your YAML config**
+
 All settings (e.g., train_data, val_data, batch_size, num_workers, epochs, paths, etc.) are read from the YAML—no CLI flags needed.
 
 ### Testing
