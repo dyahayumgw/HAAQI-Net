@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "file_path": "example/S100000_N001_fma_081613.wav",
+      "audiogram": [20, 20, 20, 30, 95, 85, 75, 30],
+      "haaqi_score": 0.1537690325856807
+    },
+    {
+      "file_path": "example/S100001_N002_fma_056649.wav",
+      "audiogram": [25, 25, 25, 35, 100, 90, 80, 35],
+      "haaqi_score": 0.5077719741655986
+    },
+    {
+      "file_path": "example/S100002_N003_fma_091093.wav",
+      "audiogram": [30, 30, 30, 40, 105, 95, 85, 40],
+      "haaqi_score": 0.5378895756313813
+    },
+    {
+      "file_path": "example/S100003_N004_fma_149103.wav",
+      "audiogram": [35, 35, 35, 45, 110, 100, 90, 45],
+      "haaqi_score": 0.4259139506425392
+    },
+    {
+      "file_path": "example/S100004_N005_mtg_01257310.wav",
+      "audiogram": [40, 40, 40, 50, 95, 85, 75, 50],
+      "haaqi_score": 0.4823436568118154
+    },
+    {
+      "file_path": "example/S100005_N006_fma_122675.wav",
+      "audiogram": [45, 45, 45, 55, 100, 90, 80, 55],
+      "haaqi_score": 0.5795901952659692
+    },
+    {
+      "file_path": "example/S100006_N007_mtg_01223077.wav",
+      "audiogram": [50, 50, 50, 60, 105, 95, 85, 60],
+      "haaqi_score": 0.21868725202473216
+    },
+    {
+      "file_path": "example/S100007_N008_fma_049476.wav",
+      "audiogram": [55, 55, 55, 65, 110, 100, 90, 65],
+      "haaqi_score": 0.3947384022184181
+    },
+    {
+      "file_path": "example/S100008_N009_fma_094039.wav",
+      "audiogram": [20, 20, 20, 30, 115, 105, 95, 30],
+      "haaqi_score": 0.41915137370221506
+    },
+    {
+      "file_path": "example/S100009_N0010_mtg_01313075.wav",
+      "audiogram": [25, 25, 25, 35, 120, 110, 100, 35],
+      "haaqi_score": 0.1953431063011493
+    }
+  ]
+}

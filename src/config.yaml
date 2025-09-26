@@ -7,4 +7,13 @@ model:
   act_fn: 'relu'
 
 # model paths
-beats_model_path: 'model/BEATs_iter3_plus_AS2M.pt'
+beats_model_path: '/model/BEATs_iter3_plus_AS2M.pt'
+
+# training parameters
+train_data: '/data/train.json'
+val_data: '/data/train.json'
+model_path: '/model/haaqi_net_best.pth'
+save_model_path: '/model/haaqi_net.pth'
+batch_size: 1
+num_workers: 4
+epochs: 10

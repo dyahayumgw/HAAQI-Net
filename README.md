@@ -46,10 +46,22 @@ conda env create -f environment.yml
 For the BEATs model, you can download it from [BEATs](https://github.com/microsoft/unilm/tree/master/beats). We specifically use the BEATs_iter3+ (AS2M) version.
 
 ### Training
-To train the model, run:
-```bash
-python src/train.py --config configs/train_config.yaml
+
+1) **Set your config path inside `src/train.py`** (at the bottom of the file):
+```python
+if __name__ == '__main__':
+    config_path = "/path/to/your/config.yaml"  # ← set this to your YAML
+    print(config_path)
+    main(config_path)
 ```
+
+2) **Run training**
+```bash
+python src/train.py
+```
+
+3) **Edit hyperparameters in your YAML config**
+All settings (e.g., train_data, val_data, batch_size, num_workers, epochs, paths, etc.) are read from the YAML—no CLI flags needed.
 
 ### Testing
 To evaluate the model, run:
